@@ -72,3 +72,7 @@ def blog(request):
 def mensajes(request):
     restringir_login(request)
     return render_to_response('mensajes.html',context_instance=RequestContext(request))
+
+def historialpagos(request):
+    restringir_login(request)
+    return render_to_response('historialpagos.html',context_instance=RequestContext(request))

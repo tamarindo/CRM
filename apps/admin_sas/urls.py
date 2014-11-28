@@ -11,6 +11,7 @@ admin_sas_urls = patterns('apps.admin_sas.views',
     url(r'^myprodutos$', 'myprodutos', name="myprodutos"), 
     url(r'^blog$', 'blog', name="blog"), 
     url(r'^mensajes$', 'mensajes', name="mensajes"), 
+    url(r'^historialpagos$', 'historialpagos', name="historialpagos"), 
 
 )  
 

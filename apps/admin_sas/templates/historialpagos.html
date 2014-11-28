@@ -1,0 +1,48 @@
+	{% extends "base_sas_cliente.html" %}
+	{% load i18n %}
+	{% block title %}{% trans 'Inicio' %}{% endblock %}
+
+
+
+	{% block content %}
+	<div>
+		<div>
+		<h2> Historial de pagos</h2>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<td> Factura </td>
+						<td> Nombre </td>
+						<td> Fecha </td>
+						<td> valor</td>
+						<td> Estado</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td> 25 </td>
+						<td> Soporte tecnico </td>
+						<td> 15/11/2014 </td>
+						<td> 250.000 </td>
+						<td> Pagado  </td>					
+				</tr>
+				<tr>
+						<td> 30</td>
+						<td> tamarindo labs </td>
+						<td> 15/11/2014 </td>
+						<td> 2'800.00 </td>
+						<td> Abonado  </td>				
+				</tr>
+				</tbody>
+				
+			</table>
+		</div>
+	</div>
+	{% endblock %}
+
+	{% block style %}
+	{% endblock %}
+
+	{% block js %}
+
+	{% endblock %}

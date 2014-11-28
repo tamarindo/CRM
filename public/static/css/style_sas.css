@@ -168,7 +168,7 @@ padding-left: 25px;
 div.lprodutos_gp {
 height: 110px;
 width: 110px;
-background: red;
+background: rgb(127, 127, 127);
 float: left;
 border-radius: 55px;
 margin: 12px;
@@ -212,10 +212,15 @@ margin: 11px 0px;
 
 .my_pro {
 overflow: hidden;
-height: 80px;
+height: 158px;
 background: rgb(248, 246, 246);
 padding: 12px;
+width: 700px;
 }
-#content_render td {
-border: 1px solid black;
-}
+.my_pro img{  width: 100%}
+
+#panel_descripciones .btn {
+margin: 0 auto;
+display: block;
+margin-bottom: 20px;
+} 
