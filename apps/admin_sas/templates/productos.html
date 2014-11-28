@@ -1,0 +1,111 @@
+		{% extends "base_sas_cliente.html" %}
+		{% load i18n %}
+		{% block title %}{% trans 'productos' %}{% endblock %}
+		{% block content %}
+		 <div id="center_produtos">
+		 	<div class="gruop_produc">
+		 		<div class="heard_gp">
+		 			<div class="logo"></div>
+		 			<h2> Desarrollo WEB </h2>
+		 		</div>
+		 		<div id="panel_descripciones">
+		 			<div class="descripcion_gp" data-gp="1">
+		 				<div class="left">
+		 				<img src="{{STATIC_URL}}img/pnladministracion.png">
+		 			</div>
+		 			<div class="rigth">
+		 				<h3> Paginas WEB</h3>
+		 				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis erat a erat tincidunt tincidunt. Proin vehicula, tortor sit amet rhoncus scelerisque, sapien enim porttitor nibh, sit amet tincidunt leo nibh pellentesque justo. In semper pulvinar diam, pellentesque bibendum mauris dapibus sed. Sed odio enim, lobortis id condimentum in, tristique nec orci. Sed vel vehicula libero, vitae pellentesque velit. Suspendisse sed luctus dui. Fusce at erat enim. Donec ut scelerisque odio. Nunc dignissim, arcu tempor bibendum lobortis, orci ligula ultrices ex, id ultrices est turpis id tellus. Ut nec pellentesque est. Sed a lacinia diam. Quisque fermentum ipsum ultricies dui facilisis iaculis.</p>
+		 				<p> Precio : 6000000</p>
+		 				<button class="btn"> Comprar </button>
+		 			</div>
+		 			</div>
+		 			<div class="descripcion_gp" data-gp="2">
+		 				<div class="left">
+		 				<img src="{{STATIC_URL}}img/pnldapps2.png">
+		 			</div>
+		 			<div class="rigth">
+		 				<h3> Aplicacion web</h3>
+		 				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis erat a erat tincidunt tincidunt. Proin vehicula, tortor sit amet rhoncus scelerisque, sapien enim porttitor nibh, sit amet tincidunt leo nibh pellentesque justo. In semper pulvinar diam, pellentesque bibendum mauris dapibus sed. Sed odio enim, lobortis id condimentum in, tristique nec orci. Sed vel vehicula libero, vitae pellentesque velit. Suspendisse sed luctus dui. Fusce at erat enim. Donec ut scelerisque odio. Nunc dignissim, arcu tempor bibendum lobortis, orci ligula ultrices ex, id ultrices est turpis id tellus. Ut nec pellentesque est. Sed a lacinia diam. Quisque fermentum ipsum ultricies dui facilisis iaculis.</p>
+		 				<p> Precio : 6000000</p>
+		 				<button class="btn"> Comprar </button>
+		 			</div>
+		 			</div>
+		 			<div class="descripcion_gp" data-gp="3">
+		 				
+		 			</div>
+		 			<div class="descripcion_gp" data-gp="4">
+		 				
+		 			</div>
+
+		 			
+
+		 		</div>
+		 		<div class="body_gp">
+		 			<div class="lprodutos_gp" data-gp="1"><span>Paginas web </span></div>
+		 			<div class="lprodutos_gp" data-gp="2"><span>Aplicaciones Moviles</span></div>
+		 			<div class="lprodutos_gp" data-gp="3"><span>e-comercio</span></div>
+		 			<div class="lprodutos_gp" data-gp="4"><span>blogs</span></div>
+		 		</div>
+		 	</div>
+
+		 	<div class="gruop_produc">
+		 		<div class="heard_gp">
+		 			<div class="logo"></div>
+		 			<h2> Aplicaciones Empresariales </h2>
+		 		</div>
+		 		<div id="panel_descripciones">
+		 			<div class="descripcion_gp" data-gp="5">
+		 				<div class="left">
+		 				<img src="">
+		 			</div>
+		 			<div class="rigth">
+		 				
+		 			</div>
+		 			</div>
+		 			<div class="descripcion_gp" data-gp="6">
+		 				
+		 			</div>
+		 			<div class="descripcion_gp" data-gp="7">
+		 				
+		 			</div>
+		 			<div class="descripcion_gp" data-gp="8">
+		 				
+		 			</div>
+
+		 			
+
+		 		</div>
+		 		<div class="body_gp">
+		 			<div class="lprodutos_gp" data-gp="5"><span>Aplicacion 1 </span></div>
+		 			<div class="lprodutos_gp" data-gp="6"><span>Aplicacion 1</span></div>
+		 			<div class="lprodutos_gp" data-gp="7"><span>Aplicacion 1</span></div>
+		 			<div class="lprodutos_gp" data-gp="8"><span>Aplicacion 1</span></div>
+		 		</div>
+		 	</div>
+
+		 
+		</div>
+
+		{% endblock %}
+
+		{% block style %}
+		{% endblock %}
+
+		{% block js %}
+
+		<script type="text/javascript">
+	     function showDescripcion(){
+	     	item=this.dataset.gp;
+	     	$(".descripcion_gp").hide();
+	     	$(".descripcion_gp[data-gp="+item+"]").show();
+
+	      }
+	      $( document ).ready(function() {
+			$('#link_catalogo_produtos').click();
+			$('.lprodutos_gp').on('click',showDescripcion);
+	      	
+	      });
+
+		</script>
+		{% endblock %}

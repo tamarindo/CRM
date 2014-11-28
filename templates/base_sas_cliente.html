@@ -1,0 +1,159 @@
+    <!DOCTYPE html>
+    <html lang="es">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="{{ PROJECT_NAME }}, {{ PROJECT_DESCRIPTION }}">
+            <meta name="tamarindolabs" content="">
+            <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico">
+            <title>{% block title %}{% endblock %}</title>
+            <link href="{{ STATIC_URL }}css/style_sas.css" rel="stylesheet">
+            <link href="{{ STATIC_URL }}css/base.css" rel="stylesheet">
+            <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+            {% block style %}
+            {% endblock %}
+        </head>
+        <body>
+
+        <header>
+          <div class="container ">
+              <div class="left">
+                <div id="select_empresa">
+                  <div id="empresa">
+                    <a href="">
+                    <a href="/adm"> 
+                      <div class="item_empresa">
+                        
+                          <div class="l_logo">
+                            <img src="{{STATIC_URL}}img/navlogo.gif" ></img>
+                          </div>
+                       
+                        <span class="l_title" >Tamarindo Lbas</span>
+                        <div class="item_hover item_empresa">
+                        </div>
+                      </div>
+                       </a>                      
+                    </a>
+                  </div>
+                  <div id="empresas">
+                     <ul>
+                       <li>
+                        <a href=""><div class="item_empresa">
+                          <div class="l_logo">
+                            <img src="{{STATIC_URL}}img/navlogo.gif" ></img>
+                          </div>
+                          <span class="l_title" >Tamarindo Lbas</span>
+                          <div class="item_hover item_empresa">
+                       </div></a>
+                       </li>
+                     </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <div id="myinfo">
+                  <div class="glyphicon glyphicon-user"></div>
+                  <span class="nombre"> Daniel Bernal</span>
+                </div>
+                <div id="notificaciones">
+                  <span class="glyphicon glyphicon-flag"></span>
+                </div>
+                <div id="configuracion">
+                  <span class="glyphicon glyphicon-wrench"></span>
+                </div>
+                 <a  href="{% url 'v_logout' %}"><div id="off">
+                  <span class="glyphicon glyphicon-off"></span>
+                </div></a>
+              </div>
+          </div>
+        </header>
+        <!-- NAVIGATION BAR -->
+                <div class="body" >
+                  <div id="app_cliente">
+                    <div class="left " >
+                      <nav class="menu_principal">
+                        <ul>
+                          <li>
+                            Productos
+                            <ul class="menu_interno " >
+                              <li> <a href="produtos" id="link_catalogo_produtos">Catalogo Productos</a> </li>
+                              <li> <a href="myprodutos" id="link_my_produtos">Mis Productos</a> </li>
+                            </ul>
+                          </li>
+                          <li>
+                            Pagos
+                            <ul class="menu_interno" >
+
+                              <li> <a href="">Pagos Pendientes</a> </li>
+                              <li> <a href="">Historial Pagos</a> </li>
+                            </ul>
+                          </li>
+                          <li>
+                            Mensajes
+                            <ul class="menu_interno" >
+                              <li> <a href="">Chat</a> </li>
+                              <li> <a href="mensajes">Correo Interno</a> </li>
+                            </ul>
+                          </li>
+                          <li>
+                            Noticias
+                            <ul class="menu_interno" >
+                              <li> <a href="blog">Blog</a> </li>
+                              <li> <a href="">Promociones</a> </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </nav>
+                      <div id="chat">
+                      </div>
+                    </div>
+                    <div id="principal_adm">
+                      <div id="content_render"> 
+                        {% block content %}
+                      
+
+                        {% endblock %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        <div id="load" ></div>
+        <!-- footer -->
+        <footer>
+             <div id="cneter_footer">
+               
+             </div>
+        </footer>
+
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/sequence.jquery.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/main.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/main_sas.js"></script>
+           <script type="text/javascript">
+                $( document ).ready(function() {
+                  function menuGestor(self)
+                  {  
+                        $('.menu_interno').hide();
+                        $(this).children('ul').show();
+                  }
+                  function salir(self)
+                  { 
+                        sendAjax('logout',"","",{'met':'post'});
+                  }
+                  $(function(){
+                        $('#slider_app div:gt(0)').hide();
+                       /*setInterval(function(){
+                          $('#slider_app div:first-child').fadeOut(0).next('div').fadeIn(6000).end().appendTo('#slider_app');}, 6100);*/
+                  
+                    });
+                 $('.menu_principal ul li').on('click',menuGestor); 
+                 /*$('#off').on('click',salir);*/
+                });
+              
+            </script>
+            {% block js %}
+           
+            {% endblock %}
+         
+        </body>
+    </html>

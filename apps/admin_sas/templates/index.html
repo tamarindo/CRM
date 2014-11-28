@@ -1,0 +1,77 @@
+	{% extends "base_sas_cliente.html" %}
+	{% load i18n %}
+	{% block title %}{% trans 'Inicio' %}{% endblock %}
+
+
+
+	{% block content %}
+	 <div id="slider_app">
+	                      <div> <img src="{{STATIC_URL}}img/pnlporque.png"> </div>
+	                      <div> <img src="{{MEDIA_URL}}img/pnlporque.png"> </div>
+	                      <div> <img src="{{MEDIA_URL}}img/pnlporque.png"> </div>
+	                      <div> <img src="{{MEDIA_URL}}img/pnlporque.png"> </div>
+	                      <div> <img src="{{MEDIA_URL}}img/pnlporque.png"> </div>
+	</div>
+	<div id="separador_1" ></div>
+	<div id="center_new">
+		<div class="left">
+
+			<div class="new_blog">
+				<div class="item_blog">
+					<div class="title">
+					  LANZAMIENTO DE CONECTA EL 31 DE ENERO
+					</div>
+					<div class="content_blog">
+						<img  width="150px" src="{{STATIC_URL}}img/conecta.png">
+						<p>
+							Despues de meses de espera por fin la herramienta que revolucionara su empresa llama y reserva tu licencia.
+						</p>
+						
+					</div>
+				</div>
+
+				<div class="item_blog">
+					<div class="title">
+					  Inveritr mejor una caso de exito
+					</div>
+					<div class="content_blog">
+						<img  width="150px" src="{{STATIC_URL}}img/land-invertirmejor.png">
+						<p>
+							Tamarindo campaño y implemento una de las empresa web mas exitosas en la actualidad...  
+						</p>
+						
+					</div>
+				</div>
+				<div id="paginador">
+					<a href="">Anterior</a> 1 2 3 4 <a href="">siguiente</a>
+				</div>
+			</div>
+		</div>
+		<div class="right">
+			<div class="notification">
+				<div class="circle g_noti">
+					<p class="noti_num">3</p>
+					<p class="noti">Notificaciones</p>
+				</div>
+
+				<div class="circle g_msg">
+					<p class="noti_num">3</p>
+					<p class="noti">Mensajes</p>
+				</div>
+
+			</div>
+			<div class="chat"></div>
+			<div class="publicidad"></div>
+		</div>
+	</div>
+
+	{% endblock %}
+
+	{% block style %}
+	{% endblock %}
+
+	{% block js %}
+	<script type="text/javascript">
+	  
+	</script>
+	{% endblock %}
